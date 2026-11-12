@@ -1,0 +1,65 @@
+/* Unmeshed brand colours */
+:root {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #f4f8fc;
+  --md-primary-bg-color: #11181c;
+  --md-primary-bg-color--light: #404040;
+  --md-accent-fg-color: #006fee;
+  --md-typeset-a-color: #1589d9;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #11181c;
+  --md-primary-fg-color--dark: #0b0f12;
+  --md-primary-bg-color: #e8eaf3;
+  --md-typeset-a-color: #30aeff;
+  --md-accent-fg-color: #30aeff;
+}
+
+/* Header: white bar with a thin brand-blue underline, like the logo */
+.md-header { border-bottom: 3px solid #30aeff; box-shadow: none; }
+.md-header__button.md-logo img { height: 1.6rem; width: auto; }
+[data-md-color-scheme="slate"] .md-header__button.md-logo img { filter: invert(1) hue-rotate(180deg); }
+.md-tabs { background: transparent; }
+
+/* Headings */
+.md-typeset h1, .md-typeset h2 { font-weight: 600; letter-spacing: -0.02em; color: var(--md-default-fg-color); }
+
+/* Hero on the overview page */
+.um-hero { padding: 1.2rem 0 0.6rem; }
+.um-eyebrow { color: #1589d9; font-weight: 600; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .2rem !important; }
+.um-hero h1 { font-size: 2.2rem; line-height: 1.15; margin-bottom: .6rem; }
+
+/* Buttons */
+.md-typeset .md-button { border-radius: 12px; font-weight: 600; border-color: #d4d4d8; color: var(--md-default-fg-color); }
+.md-typeset .md-button--primary { background: #006fee; border-color: #006fee; color: #fff; }
+.md-typeset .md-button:hover { background: #0058c4; border-color: #0058c4; color: #fff; }
+
+/* Feature cards */
+.md-typeset .grid.cards > ul > li { border-radius: 16px; border-color: #e4e4e7; }
+.md-typeset .grid.cards > ul > li:hover { border-color: rgba(48,174,255,.6); box-shadow: 0 10px 30px rgba(48,174,255,.12); }
+
+/* Link colours (custom white primary would otherwise make links white) */
+.md-typeset a { color: #1589d9; }
+.md-typeset a:hover, .md-typeset a:focus { color: #006fee; }
+[data-md-color-scheme="slate"] .md-typeset a { color: #30aeff; }
+.md-typeset a.md-button--primary, .md-typeset a.md-button--primary:hover { color: #fff; }
+.md-typeset a.md-button:not(.md-button--primary) { color: var(--md-default-fg-color); }
+.md-typeset a.md-button:not(.md-button--primary):hover { color: #fff; }
+.md-nav__link--active, .md-nav__link:hover, .md-nav__link:focus { color: #1589d9 !important; }
+
+/* Search box on the white header */
+.md-search__input { background: #f4f4f5; color: #11181c; }
+.md-search__input::placeholder, .md-search__icon { color: #71717a; }
+[data-md-color-scheme="slate"] .md-search__input { background: #1d2328; color: #e8eaf3; }
+
+/* Admonitions (FAQ questions, tips) in brand blue */
+.md-typeset .admonition.question, .md-typeset details.question,
+.md-typeset .admonition.tip, .md-typeset details.tip { border-color: #30aeff; }
+.md-typeset .question > .admonition-title, .md-typeset .question > summary,
+.md-typeset .tip > .admonition-title, .md-typeset .tip > summary { background-color: rgba(48,174,255,.10); }
+.md-typeset .question > .admonition-title::before, .md-typeset .question > summary::before,
+.md-typeset .tip > .admonition-title::before, .md-typeset .tip > summary::before,
+.md-typeset .question > summary::after { background-color: #1589d9; }
+.md-typeset details { border-radius: 12px; }
