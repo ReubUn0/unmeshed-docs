@@ -1,0 +1,84 @@
+site_name: Unmeshed
+site_description: Unmeshed is a workflow orchestration platform for APIs, AI agents, batch jobs and human approvals, built by the team behind Netflix Conductor.
+site_author: Unmeshed, Inc.
+site_url: !ENV [READTHEDOCS_CANONICAL_URL, "https://unmeshed.readthedocs.io/"]
+copyright: "&copy; 2026 <a href=\"https://unmeshed.io/\">Unmeshed, Inc.</a>"
+
+nav:
+  - Overview: index.md
+  - What makes Unmeshed different: different.md
+  - Quickstart: quickstart.md
+  - Step types: step-types.md
+  - Use cases: use-cases.md
+  - FAQ: faq.md
+  - Resources: resources.md
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+    - search.highlight
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  homepage: https://unmeshed.io/
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://unmeshed.io/
+      name: unmeshed.io
+    - icon: fontawesome/brands/github
+      link: https://github.com/unmeshed
+      name: Unmeshed on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/unmeshed-inc/
+      name: Unmeshed on LinkedIn
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@unmeshedio
+      name: Unmeshed on YouTube
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/unmeshedio
+      name: Unmeshed on X
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
